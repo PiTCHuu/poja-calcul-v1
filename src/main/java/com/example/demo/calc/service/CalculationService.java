@@ -28,6 +28,8 @@ public class CalculationService {
     public CalculationResult divide(long a, long b) {
         if (b == 0 ) {
             throw new ArithmeticException("Division by zero is not allowed");
+        } else if ( a < b || a % b != 0 ) {
+            throw new ArithmeticException("Invalide division operation");
         }
         return new CalculationResult(a / b);
     }

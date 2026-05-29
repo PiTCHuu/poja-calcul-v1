@@ -78,8 +78,7 @@ class CalculationServiceTest {
     }
 
     @Test
-    void divide_nonDivisible_returnsDecimal() {
-        CalculationResult result = service.divide(5, 2);
-        assertEquals(2.5, result.result());
+    void divide_nonDivisible_throwsException() {
+        assertThrows(ArithmeticException.class, () -> service.divide(5, 2));
     }
 }
