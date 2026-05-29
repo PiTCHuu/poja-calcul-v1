@@ -4,10 +4,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import com.example.demo.calc.entity.CalculationResult;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.junit.jupiter.MockitoExtension;
 
+@ExtendWith(MockitoExtension.class)
 class CalculationServiceTest {
 
-    CalculationService service = new CalculationService();
+    @InjectMocks
+    CalculationService service;
 
     @Test
     void add_positiveNumbers_returnsSum() {
