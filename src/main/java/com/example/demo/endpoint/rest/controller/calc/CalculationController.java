@@ -13,29 +13,29 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class CalculationController {
 
-  CalculationService calculationService;
+    CalculationService calculationService;
 
-  @GetMapping("/calc/add")
-  public CalculationResult add( CalculationRequest request) {
+    @GetMapping("/calc/add")
+    public CalculationResult add(CalculationRequest request) {
 
-      return calculationService.add(request.a(), request.b());
-  }
+        return calculationService.add(request.a(), request.b());
+    }
 
-  @GetMapping("/calc/subtract")
-  public CalculationResult subtract( CalculationRequest request) {
+    @GetMapping("/calc/subtract")
+    public CalculationResult subtract(CalculationRequest request) {
 
-    return calculationService.subtract(request.a(), request.b());
-  }
+        return calculationService.subtract(request.a(), request.b());
+    }
 
-  @GetMapping("/calc/multiply")
-  public CalculationResult multiply( CalculationRequest request) {
+    @GetMapping("/calc/multiply")
+    public CalculationResult multiply(CalculationRequest request) {
 
-    return calculationService.multiply(request.a(), request.b());
-  }
+        return calculationService.multiply(request.a(), request.b());
+    }
 
-  @GetMapping("/calc/divide")
-  public CalculationResult divide( CalculationRequest request) {
+    @GetMapping("/calc/divide")
+    public CalculationResult divide(CalculationRequest request) {
 
-    return calculationService.divide(request.a(), request.b());
-  }
+        return calculationService.divide(request.a(), request.b());
+    }
 }
